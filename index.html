@@ -98,7 +98,7 @@ img{display:block;max-width:100%}
 .h2{
   font-family:var(--FH);font-size:clamp(1.65rem,2.2vw,2.2rem);
   font-weight:800;line-height:1.1;letter-spacing:-.02em;color:var(--n1);
-  margin-bottom:.45rem;
+  margin-bottom:.45rem;overflow-wrap:break-word;
 }
 .h2-w{color:var(--white)}
 .body{font-size:.95rem;font-weight:400;line-height:1.85;color:var(--muted)}
@@ -219,7 +219,7 @@ img{display:block;max-width:100%}
   font-family:var(--FH);
   font-size:clamp(1.75rem,3vw,3rem);
   font-weight:900;line-height:1.06;letter-spacing:-.02em;
-  color:var(--white);margin-bottom:.85rem;text-transform:uppercase;
+  color:var(--white);margin-bottom:.85rem;text-transform:uppercase;overflow-wrap:break-word;
 }
 .hero-h span{display:block}
 .hero-h span:nth-child(1){animation:fadeUp .7s var(--ease2) .12s both}
@@ -868,7 +868,7 @@ body{-webkit-font-smoothing:antialiased}
   .cta-h{font-size:clamp(1.3rem,5vw,1.8rem)}
   .cta-p{font-size:.85rem;max-width:100%}
   .cta-acts{flex-direction:column;width:100%;gap:.65rem}
-  .cta-acts .btn{justify-content:center;width:100%;padding:13px 20px}
+  .cta-acts .btn{justify-content:center;width:100%;padding:14px 20px;font-size:.88rem}
 
   /* ── WHY ── */
   #why{padding:2.5rem 0}
@@ -893,7 +893,7 @@ body{-webkit-font-smoothing:antialiased}
   .tl-line-progress{left:70px}
   .tl-l{padding:0 1.25rem 1.75rem 0}
   .tl-yr{font-size:1rem}
-  .tl-r{padding:0 0 1.75rem 1.25rem}
+  .tl-r{padding:0 .5rem 1.75rem 1.25rem}
   .tl-card{padding:1rem 1.1rem}
   .tl-title{font-size:.88rem}
   .tl-text{font-size:.82rem}
@@ -979,8 +979,10 @@ body{-webkit-font-smoothing:antialiased}
   .W{padding:0 1rem}
 
   /* Hero */
-  .hero-body{padding:5rem 0 1.25rem}
-  .hero-h{font-size:clamp(1.6rem,8vw,2.2rem);line-height:1.05}
+  .hero-body{padding:3rem 0 1.25rem}
+  .hero-h{font-size:clamp(1.5rem,7.5vw,2.1rem);line-height:1.06}
+  .h-ey-item,.h-ey-dim{font-size:.6rem;letter-spacing:.1em}
+  .h-ey-div{margin:0 .5rem}
   .hero-p{font-size:.84rem}
   .hero-ctas .btn{padding:10px 16px;font-size:.7rem}
   .hero-ctas{gap:.5rem}
