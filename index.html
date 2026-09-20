@@ -76,14 +76,26 @@
   --ease2:cubic-bezier(.16,1,.3,1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px;scroll-padding-top:64px}
+html{scroll-behavior:smooth;font-size:16px;scroll-padding-top:70px}
+@media(min-width:1200px){
+  html{font-size:17.5px}
+  .W{max-width:1300px}
+}
+@media(min-width:1440px){
+  html{font-size:19px}
+  .W{max-width:1400px}
+}
+@media(min-width:1800px){
+  html{font-size:20.5px}
+  .W{max-width:1520px}
+}
 body{font-family:var(--FB);color:var(--txt);background:var(--white);overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 img{display:block;max-width:100%}
 .W{max-width:1240px;margin:0 auto;padding:0 2.5rem}
 
 /* ── Logo ── */
-.brand-logo{height:44px;width:auto;display:block}
+.brand-logo{height:48px;width:auto;display:block}
 .mob-logo-img{height:42px;width:auto;filter:brightness(0) invert(1)}
 .ft-logo-img{height:36px;width:auto;border-radius:4px;margin-bottom:.4rem;display:block}
 
@@ -155,22 +167,22 @@ img{display:block;max-width:100%}
 
 /* ── NAV ── */
 .nav{position:sticky;top:0;z-index:990;background:rgba(255,255,255,.97);border-top:2px solid var(--g1);border-bottom:1px solid var(--line);box-shadow:0 4px 24px rgba(10,22,40,.06);backdrop-filter:blur(16px)}
-.nav .W{display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav .W{display:flex;align-items:center;justify-content:space-between;height:70px}
 .brand{display:flex;flex-direction:column;gap:1px}
 .brand-n{font-family:var(--FH);font-size:1.5rem;font-weight:800;color:var(--n1);line-height:1;letter-spacing:-.02em}
 .brand-n em{color:var(--g1);font-style:normal}
 .brand-s{font-size:.5rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--faint)}
 .nav-links{display:flex;list-style:none}
 .nav-links a{
-  font-family:var(--FB);font-size:.78rem;font-weight:500;color:var(--muted);
-  padding:0 .85rem;height:64px;display:flex;align-items:center;
+  font-family:var(--FB);font-size:.88rem;font-weight:600;color:var(--muted);
+  padding:0 1.1rem;height:70px;display:flex;align-items:center;
   border-bottom:2px solid transparent;transition:color .2s,border-color .2s;
 }
 .nav-links a:hover,.nav-links a.on{color:var(--n1);border-bottom-color:var(--g1)}
 .nav-cta{
-  font-family:var(--FH);font-size:.68rem;font-weight:700;letter-spacing:.08em;
+  font-family:var(--FH);font-size:.78rem;font-weight:700;letter-spacing:.08em;
   text-transform:uppercase;background:var(--n1);color:var(--white);
-  padding:9px 20px;border-radius:6px;transition:all .22s;
+  padding:10px 22px;border-radius:6px;transition:all .22s;
   display:flex;align-items:center;gap:.45rem;
 }
 .nav-cta:hover{background:var(--g1);color:var(--n1)}
@@ -194,7 +206,7 @@ img{display:block;max-width:100%}
   background:var(--n1);
   display:flex;flex-direction:column;
   position:relative;overflow:hidden;
-  height:calc(100vh - 64px); /* nav 64px */
+  height:calc(100vh - 70px); /* nav 70px */
   min-height:580px;
 }
 .hero-bg{position:absolute;inset:0;z-index:0}
@@ -208,7 +220,7 @@ img{display:block;max-width:100%}
 
 .hero-vline{position:absolute;left:0;top:0;bottom:0;width:4px;z-index:1;background:linear-gradient(to bottom,transparent,var(--g1) 18%,var(--g1) 82%,transparent)}
 .hero-body{flex:1;display:flex;align-items:center;padding:2rem 0 1rem;position:relative;z-index:2}
-.hero-inner{max-width:800px}
+.hero-inner{max-width:880px}
 /* Eyebrow */
 .h-ey{display:flex;align-items:center;flex-wrap:wrap;gap:0;margin-bottom:1rem;animation:fadeUp .6s var(--ease2) .05s both}
 .h-ey-item{font-family:var(--FH);font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--g1)}
@@ -227,8 +239,8 @@ img{display:block;max-width:100%}
 .hero-h .gold{color:var(--g1);animation:fadeUp .7s var(--ease2) .32s both}
 /* Sub */
 .hero-p{
-  font-size:.95rem;font-weight:400;line-height:1.78;
-  color:rgba(255,255,255,.5);margin-bottom:.9rem;max-width:580px;
+  font-size:1.05rem;font-weight:400;line-height:1.8;
+  color:rgba(255,255,255,.7);margin-bottom:1.1rem;max-width:640px;
   animation:fadeUp .6s var(--ease2) .42s both;
 }
 .hero-p strong{color:var(--white);font-weight:600}
@@ -251,18 +263,18 @@ img{display:block;max-width:100%}
   background:rgba(10,22,40,.65);backdrop-filter:blur(12px);
 }
 .hs{
-  padding:1rem 1.5rem;border-right:1px solid rgba(255,255,255,.08);
-  display:flex;align-items:center;gap:.85rem;
+  padding:1.25rem 1.8rem;border-right:1px solid rgba(255,255,255,.08);
+  display:flex;align-items:center;gap:1rem;
   position:relative;transition:background .28s;
 }
 .hs:last-child{border-right:none}
 .hs:hover{background:rgba(255,255,255,.04)}
 .hs::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--g1);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
 .hs:hover::before{transform:scaleX(1)}
-.hs-ico{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:var(--g1);font-size:.7rem;flex-shrink:0}
-.hs-num{font-family:var(--FH);font-size:1.6rem;font-weight:800;color:var(--white);line-height:1;letter-spacing:-.02em}
+.hs-ico{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:var(--g1);font-size:.85rem;flex-shrink:0}
+.hs-num{font-family:var(--FH);font-size:1.85rem;font-weight:800;color:var(--white);line-height:1;letter-spacing:-.02em}
 .hs-num em{color:var(--g2);font-style:normal;font-size:.8em}
-.hs-lbl{font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-top:.1rem}
+.hs-lbl{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:.15rem}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 
@@ -672,9 +684,9 @@ footer{background:var(--n1);border-top:1px solid rgba(255,255,255,.06)}
 /* ── NAV ACTIONS ── */
 .nav-actions{display:flex;align-items:center;gap:.75rem}
 .nav-wa{
-  display:inline-flex;align-items:center;gap:.4rem;
-  font-family:var(--FH);font-size:.7rem;font-weight:700;letter-spacing:.04em;
-  padding:9px 16px;border-radius:6px;
+  display:inline-flex;align-items:center;gap:.45rem;
+  font-family:var(--FH);font-size:.78rem;font-weight:700;letter-spacing:.04em;
+  padding:10px 20px;border-radius:6px;
   background:#25D366;color:#fff;border:2px solid #25D366;
   transition:all .25s var(--ease);white-space:nowrap;
 }
