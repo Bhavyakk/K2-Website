@@ -76,23 +76,51 @@
   --ease2:cubic-bezier(.16,1,.3,1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px;scroll-padding-top:70px}
-@media(min-width:1200px){
-  html{font-size:17.5px}
-  .W{max-width:1300px}
+html{
+  scroll-behavior:smooth;
+  font-size:16px;
+  scroll-padding-top:70px;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
 }
-@media(min-width:1440px){
-  html{font-size:19px}
-  .W{max-width:1400px}
+body{
+  font-family:var(--FB);
+  color:var(--txt);
+  background:var(--white);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
 }
-@media(min-width:1800px){
-  html{font-size:20.5px}
-  .W{max-width:1520px}
-}
-body{font-family:var(--FB);color:var(--txt);background:var(--white);overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 img{display:block;max-width:100%}
-.W{max-width:1240px;margin:0 auto;padding:0 2.5rem}
+
+/* ── BASE WRAPPER (Fluid Responsive) ── */
+.W{
+  width:100%;
+  max-width:1240px;
+  margin:0 auto;
+  padding:0 2rem;
+}
+
+/* ── LARGE SCREENS & DESKTOP (Scale Up Fluidly) ── */
+@media(min-width:1280px){
+  html{font-size:16.5px}
+  .W{max-width:1260px;padding:0 2.5rem}
+}
+@media(min-width:1440px){
+  html{font-size:17.5px}
+  .W{max-width:1380px;padding:0 3rem}
+  .hero-inner{max-width:900px}
+}
+@media(min-width:1680px){
+  html{font-size:18.5px}
+  .W{max-width:1480px;padding:0 3.5rem}
+  .hero-inner{max-width:960px}
+}
+@media(min-width:1920px){
+  html{font-size:19.5px}
+  .W{max-width:1560px;padding:0 4rem}
+  .hero-inner{max-width:1040px}
+}
 
 /* ── Logo ── */
 .brand-logo{height:48px;width:auto;display:block}
@@ -531,117 +559,6 @@ footer{background:var(--n1);border-top:2px solid rgba(184,137,26,.3)}
 .fl-top.on{opacity:1;pointer-events:all}
 .fl-top:hover{background:var(--n2)}
 
-/* ══ RESPONSIVE ══ */
-
-/* 1440px — MacBook Air */
-@media(max-width:1440px){
-  #hero{height:calc(100vh - 100px)}
-}
-
-/* 1280px */
-@media(max-width:1280px){
-  .W{padding:0 2rem}
-  .about-grid{grid-template-columns:340px 1fr;gap:4rem}
-}
-
-/* 1100px — tablet landscape */
-@media(max-width:1100px){
-  .W{padding:0 1.75rem}
-  .nav-links,.nav-cta{display:none}
-  .ham{display:flex}
-  #hero{height:auto;min-height:calc(100svh - 64px)}
-  .hero-h{font-size:clamp(1.9rem,4.5vw,3.2rem)}
-  .about-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
-  .co-grid{grid-template-columns:1fr 1fr}
-  .prod-hd{grid-template-columns:1fr;gap:.85rem}
-  .prod-grid{grid-template-columns:repeat(3,1fr)}
-  .pc-wide{grid-column:1/-1;flex-direction:row}
-  .pc-wide .pc-img{width:200px;height:auto;border-radius:13px 0 0 13px}
-  .cta-inner{flex-direction:column;align-items:flex-start}
-  .why-hd{grid-template-columns:1fr;gap:.85rem}
-  .why-g{grid-template-columns:1fr 1fr}
-  .clients-hd{grid-template-columns:1fr;gap:.85rem}
-  
-  .tl-hd{grid-template-columns:1fr;gap:.85rem}
-  .tl-spine{grid-template-columns:115px 1fr}
-  .tl-spine::before{left:113px}
-  .aw-wrap{grid-template-columns:1fr;gap:2rem}
-  .iso-box{position:static;max-width:340px}
-  .lead-wrap{grid-template-columns:1fr 1fr}
-  .csr-hd{grid-template-columns:1fr;gap:.85rem}
-  .ct-wrap{grid-template-columns:1fr 1fr;gap:2.5rem}
-  .ft-main{grid-template-columns:1fr 1fr;gap:2rem}
-  #about,#companies,#products,#why,#clients,#timeline,#awards,#leadership,#csr,#contact{padding:4rem 0}
-}
-
-/* 900px */
-@media(max-width:900px){
-  .about-grid{grid-template-columns:1fr}
-  .about-visual{display:none}
-  .about-mvs{grid-template-columns:1fr 1fr}
-  .prod-grid{grid-template-columns:1fr 1fr}
-  .pc-wide{grid-column:1/-1;flex-direction:column}
-  .pc-wide .pc-img{width:100%;height:160px;border-radius:13px 13px 0 0}
-  .lead-wrap{grid-template-columns:1fr}
-  .ct-wrap{grid-template-columns:1fr;gap:2rem}
-  .csr-g{grid-template-columns:1fr 1fr}
-  #about,#companies,#products,#why,#clients,#timeline,#awards,#leadership,#csr,#contact{padding:3.5rem 0}
-}
-
-/* 768px — iPad */
-@media(max-width:768px){
-  .W{padding:0 1.35rem}
-  .topbar{display:none}
-  #hero{height:auto;min-height:100svh}
-  .hero-body{padding:2.5rem 0 1.5rem}
-  .hero-h{font-size:clamp(1.8rem,6.5vw,2.8rem)}
-  .hero-stats{grid-template-columns:1fr 1fr}
-  .hs{padding:.85rem 1.1rem;gap:.7rem}
-  .hs-num{font-size:1.35rem}
-  .hs-ico{width:28px;height:28px;font-size:.65rem}
-  .about-mvs{grid-template-columns:1fr}
-  .co-grid{grid-template-columns:1fr}
-  .why-g{grid-template-columns:1fr 1fr}
-  
-  
-  .tl-spine{grid-template-columns:88px 1fr}
-  .tl-spine::before{left:86px}
-  .tl-l{padding:0 1.75rem 2rem 0}
-  .tl-r{padding:0 0 2rem 1.75rem}
-  .csr-g{grid-template-columns:1fr}
-  .cf2{grid-template-columns:1fr}
-  .ft-main{grid-template-columns:1fr 1fr;gap:1.75rem}
-  #about,#companies,#products,#why,#clients,#timeline,#awards,#leadership,#csr,#contact{padding:3rem 0}
-}
-
-/* 640px — mobile */
-@media(max-width:640px){
-  .W{padding:0 1.1rem}
-  .hero-h{font-size:clamp(1.7rem,7.5vw,2.5rem)}
-  .h-ey-div{margin:0 .7rem}
-  .hero-stats{grid-template-columns:1fr 1fr}
-  .prod-grid{grid-template-columns:1fr}
-  .pc-wide{grid-column:span 1;flex-direction:column}
-  .pc-wide .pc-img{width:100%;height:150px;border-radius:13px 13px 0 0}
-  .why-g{grid-template-columns:1fr}
-  
-  .tl-cat{display:none}
-  .cta-acts{flex-direction:column;width:100%}
-  .cta-acts .btn{justify-content:center;width:100%}
-  .ft-main{grid-template-columns:1fr;gap:1.75rem}
-  .about-nums{grid-template-columns:1fr 1fr}
-  #about,#companies,#products,#why,#clients,#timeline,#awards,#leadership,#csr,#contact{padding:2.5rem 0}
-}
-
-/* 400px */
-@media(max-width:400px){
-  .W{padding:0 .9rem}
-  .hero-h{font-size:1.6rem}
-  .h-ey-item,.h-ey-dim{font-size:.62rem}
-  
-  .ft-main{grid-template-columns:1fr}
-}
-
 /* ── LOADER ── */
 #loader{
   position:fixed;inset:0;z-index:99999;
@@ -784,9 +701,56 @@ body{-webkit-font-smoothing:antialiased}
   .hero-bg img{transform:none!important;will-change:auto}
 }
 
-/* ══ 1100px TABLET ══ */
+/* ══ 1280px LAPTOPS ══ */
+@media(max-width:1280px){
+  .W{padding:0 2rem}
+  .about-grid{grid-template-columns:340px 1fr;gap:3.5rem}
+}
+
+/* ══ 1100px TABLET LANDSCAPE ══ */
 @media(max-width:1100px){
+  .W{padding:0 1.75rem}
+  .nav-links,.nav-cta{display:none}
+  .ham{display:flex}
   .nav-actions .nav-quote-btn{display:none}
+  #hero{min-height:calc(100svh - 70px);height:auto}
+  .hero-h{font-size:clamp(1.9rem,4.5vw,3.2rem)}
+  .about-grid{grid-template-columns:1fr 1fr;gap:2.5rem}
+  .co-grid{grid-template-columns:1fr 1fr}
+  .prod-hd{grid-template-columns:1fr;gap:.85rem}
+  .prod-grid{grid-template-columns:repeat(3,1fr)}
+  .pc-wide{grid-column:1/-1;flex-direction:row}
+  .pc-wide .pc-img{width:200px;height:auto;border-radius:13px 0 0 13px}
+  .cta-inner{flex-direction:column;align-items:flex-start}
+  .why-hd{grid-template-columns:1fr;gap:.85rem}
+  .why-g{grid-template-columns:1fr 1fr}
+  .clients-hd{grid-template-columns:1fr;gap:.85rem}
+  .tl-hd{grid-template-columns:1fr;gap:.85rem}
+  .tl-spine{grid-template-columns:115px 1fr}
+  .tl-spine::before{left:113px}
+  .aw-wrap{grid-template-columns:1fr;gap:2rem}
+  .iso-box{position:static;max-width:340px}
+  .lead-wrap{grid-template-columns:1fr 1fr}
+  .csr-hd{grid-template-columns:1fr;gap:.85rem}
+  .ct-wrap{grid-template-columns:1fr 1fr;gap:2.5rem}
+  .ft-main{grid-template-columns:1fr 1fr;gap:2rem}
+  #about,#companies,#products,#why,#clients,#timeline,#awards,#leadership,#csr,#contact{padding:3.5rem 0}
+}
+
+/* ══ 900px SMALL TABLETS ══ */
+@media(max-width:900px){
+  .about-grid{grid-template-columns:1fr}
+  .about-visual{display:none}
+  .about-mvs{grid-template-columns:1fr 1fr}
+  .prod-grid{grid-template-columns:1fr 1fr}
+  .pc-wide{grid-column:1/-1;flex-direction:column}
+  .pc-wide .pc-img{width:100%;height:160px;border-radius:13px 13px 0 0}
+  .lead-wrap{grid-template-columns:1fr}
+  .ct-wrap{grid-template-columns:1fr;gap:2rem}
+  .csr-g{grid-template-columns:1fr 1fr}
+  .nav-actions .nav-wa span{display:none}
+  .nav-wa{padding:9px 12px}
+  #about,#companies,#products,#why,#clients,#timeline,#awards,#leadership,#csr,#contact{padding:3rem 0}
 }
 
 /* ══ 768px iPAD / MOBILE ══ */
