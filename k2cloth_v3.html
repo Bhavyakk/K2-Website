@@ -195,10 +195,14 @@ img{display:block;max-width:100%}
 .hero-body{flex:1;display:flex;align-items:center;padding:2.5rem 0 1.5rem;position:relative;z-index:2}
 .hero-inner{max-width:880px}
 /* Eyebrow */
-.h-ey{display:flex;align-items:center;flex-wrap:wrap;gap:0;margin-bottom:1rem;animation:fadeUp .6s var(--ease2) .05s both}
-.h-ey-item{font-family:var(--FH);font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--g1)}
-.h-ey-dim{font-family:var(--FH);font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4)}
-.h-ey-div{display:inline-block;width:1px;height:12px;background:rgba(255,255,255,.2);margin:0 1rem}
+.h-ey{
+  display:flex;align-items:center;flex-wrap:wrap;gap:.35rem .5rem;margin-bottom:1rem;
+  font-family:var(--FH);font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(255,255,255,.6);animation:fadeUp .6s var(--ease2) .05s both;
+}
+.h-ey-gold{color:var(--g1);display:inline-flex;align-items:center;gap:5px}
+.h-ey-gold i{color:var(--g1);font-size:.75rem}
+.h-ey-dot{color:rgba(184,137,26,.6);margin:0 3px}
 /* Heading */
 .hero-h{
   font-family:var(--FH);
@@ -219,13 +223,18 @@ img{display:block;max-width:100%}
 .hero-p strong{color:var(--white);font-weight:600}
 /* Clients */
 .hero-clients{
-  display:flex;align-items:center;flex-wrap:wrap;gap:0;
-  margin-bottom:1.5rem;
+  display:flex;align-items:center;flex-wrap:wrap;gap:.5rem .75rem;
+  margin-bottom:1.5rem;font-family:var(--FH);font-size:.75rem;
   animation:fadeUp .6s var(--ease2) .5s both;
 }
-.hc{font-family:var(--FH);font-size:.75rem;font-weight:500;letter-spacing:.04em;color:rgba(255,255,255,.32);display:flex;align-items:center;gap:.55rem}
-.hc::after{content:'›';color:rgba(255,255,255,.2);margin-left:.55rem}
-.hc:last-child::after{display:none}
+.hc-lbl{font-size:.62rem;font-weight:800;letter-spacing:.14em;color:var(--g1);text-transform:uppercase}
+.hc-items{color:rgba(255,255,255,.68);font-weight:500}
+.hc-items span{color:rgba(184,137,26,.6);margin:0 4px}
+.hc-count{
+  color:var(--g1);font-weight:700;font-size:.68rem;
+  background:rgba(184,137,26,.12);border:1px solid rgba(184,137,26,.28);
+  padding:2px 8px;border-radius:4px;letter-spacing:.04em;
+}
 /* CTAs */
 .hero-ctas{display:flex;align-items:center;gap:.85rem;flex-wrap:wrap;animation:fadeUp .6s var(--ease2) .58s both}
 /* Stats */
@@ -772,7 +781,7 @@ body{-webkit-font-smoothing:antialiased}
   /* ── Progress bar thicker on mobile ── */
   #prog{height:4px}
 
-  /* ── HERO: 2-PAGE MOBILE FLOW (PERFECTED ALIGNMENT & SIZING) ── */
+  /* ── HERO: 2-PAGE MOBILE FLOW (CLEAN LUXURY DESIGN) ── */
   #hero{
     height:auto !important;
     min-height:auto !important;
@@ -781,18 +790,18 @@ body{-webkit-font-smoothing:antialiased}
   }
   .hero-vline{display:none !important}
   .hero-bg::after{
-    background:linear-gradient(180deg, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.78) 45%, rgba(10,22,40,0.95) 100%) !important;
+    background:linear-gradient(180deg, rgba(10,22,40,0.92) 0%, rgba(10,22,40,0.78) 45%, rgba(10,22,40,0.96) 100%) !important;
   }
 
-  /* PAGE 1: HERO VIEWPORT (Starts comfortably from top, pinned hint at bottom) */
+  /* PAGE 1: HERO VIEWPORT (Fills full mobile screen, clean typography) */
   .hero-body{
     min-height:calc(100svh - 56px) !important;
     min-height:calc(100dvh - 56px) !important;
     display:flex !important;
     flex-direction:column !important;
-    justify-content:flex-start !important;
+    justify-content:space-between !important;
     align-items:stretch !important;
-    padding:1.75rem 0 1.25rem !important;
+    padding:2rem 0 1.25rem !important;
     box-sizing:border-box !important;
   }
   .hero-body .W{
@@ -814,88 +823,88 @@ body{-webkit-font-smoothing:antialiased}
     flex-direction:column !important;
   }
 
-  /* Eyebrow: neat rounded tags instead of dangling pipes */
+  /* Eyebrow: pure typography, no pill boxes */
   .h-ey{
     display:flex !important;
     flex-wrap:wrap !important;
     align-items:center !important;
-    gap:6px 8px !important;
-    margin-bottom:1rem !important;
-  }
-  .h-ey-div{display:none !important}
-  .h-ey-item,.h-ey-dim{
-    font-size:0.64rem !important;
+    gap:0.35rem 0.5rem !important;
+    font-family:var(--FH) !important;
+    font-size:0.7rem !important;
     font-weight:700 !important;
-    letter-spacing:0.08em !important;
+    letter-spacing:0.14em !important;
     text-transform:uppercase !important;
-    padding:4px 10px !important;
-    border-radius:20px !important;
-    display:inline-flex !important;
-    align-items:center !important;
-    gap:5px !important;
+    color:rgba(255,255,255,0.65) !important;
+    margin-bottom:0.95rem !important;
+    background:none !important;
+    border:none !important;
+    padding:0 !important;
   }
-  .h-ey-item{
-    color:var(--g1) !important;
-    background:rgba(184,137,26,0.12) !important;
-    border:1px solid rgba(184,137,26,0.3) !important;
-  }
-  .h-ey-dim{
-    color:rgba(255,255,255,0.7) !important;
-    background:rgba(255,255,255,0.06) !important;
-    border:1px solid rgba(255,255,255,0.12) !important;
-  }
+  .h-ey-gold{color:var(--g1) !important;display:inline-flex;align-items:center;gap:4px}
+  .h-ey-gold i{color:var(--g1) !important;font-size:0.72rem}
+  .h-ey-dot{color:rgba(184,137,26,0.6) !important;margin:0 2px}
 
-  /* Heading: crisp line height, sharp bold typography */
+  /* Heading: commanding, tight line height */
   .hero-h{
-    font-size:clamp(1.75rem, 7.2vw, 2.3rem) !important;
+    font-size:clamp(1.85rem, 7.6vw, 2.4rem) !important;
     font-weight:900 !important;
     line-height:1.1 !important;
     letter-spacing:-0.02em !important;
-    margin-bottom:0.9rem !important;
+    color:var(--white) !important;
+    margin-bottom:0.95rem !important;
     word-break:break-word !important;
+    text-transform:uppercase !important;
   }
   .hero-h span{display:block}
   .hero-h .gold{color:var(--g1) !important;display:block}
 
-  /* Subtitle: comfortable reading width & line height */
+  /* Subtitle: clean, balanced reading flow */
   .hero-p{
     font-size:0.88rem !important;
-    line-height:1.64 !important;
+    line-height:1.68 !important;
     color:rgba(255,255,255,0.76) !important;
-    margin-bottom:1.2rem !important;
+    margin-bottom:1.35rem !important;
     max-width:96% !important;
   }
 
-  /* Clients: modern pill badges */
+  /* Clients: subtle inline trust bar */
   .hero-clients{
     display:flex !important;
+    align-items:center !important;
     flex-wrap:wrap !important;
-    align-items:center !important;
-    gap:6px 8px !important;
-    margin-bottom:1.4rem !important;
-  }
-  .hc{
+    gap:0.35rem 0.65rem !important;
+    margin-bottom:1.55rem !important;
     font-family:var(--FH) !important;
-    font-size:0.68rem !important;
-    font-weight:600 !important;
+    font-size:0.74rem !important;
     letter-spacing:0.04em !important;
-    color:rgba(255,255,255,0.78) !important;
-    background:rgba(255,255,255,0.05) !important;
-    border:1px solid rgba(255,255,255,0.12) !important;
-    padding:4px 9px !important;
-    border-radius:4px !important;
-    display:inline-flex !important;
-    align-items:center !important;
   }
-  .hc::after{display:none !important}
-  .hc.hc-highlight,.hc:last-child{
+  .hc-lbl{
+    font-size:0.6rem !important;
+    font-weight:800 !important;
+    letter-spacing:0.14em !important;
     color:var(--g1) !important;
-    border-color:rgba(184,137,26,0.35) !important;
-    background:rgba(184,137,26,0.1) !important;
+    text-transform:uppercase !important;
+  }
+  .hc-items{
+    color:rgba(255,255,255,0.75) !important;
+    font-weight:500 !important;
+  }
+  .hc-items span{
+    color:rgba(184,137,26,0.6) !important;
+    margin:0 3px;
+  }
+  .hc-count{
+    color:var(--g1) !important;
     font-weight:700 !important;
+    background:rgba(184,137,26,0.12) !important;
+    border:1px solid rgba(184,137,26,0.28) !important;
+    padding:2px 7px !important;
+    border-radius:4px !important;
+    font-size:0.65rem !important;
+    letter-spacing:0.04em !important;
   }
 
-  /* CTA Button */
+  /* CTA Button: THE primary hero action */
   .hero-ctas{
     display:flex !important;
     align-items:center !important;
@@ -903,40 +912,42 @@ body{-webkit-font-smoothing:antialiased}
     margin-bottom:0.5rem !important;
   }
   .hero-ctas .btn{
-    padding:13px 26px !important;
-    font-size:0.78rem !important;
+    padding:14px 28px !important;
+    font-size:0.8rem !important;
     font-weight:700 !important;
     letter-spacing:0.06em !important;
     border-radius:6px !important;
-    box-shadow:0 4px 20px rgba(184,137,26,0.3) !important;
+    box-shadow:0 4px 24px rgba(184,137,26,0.38) !important;
+    display:inline-flex !important;
+    align-items:center !important;
+    gap:8px !important;
   }
 
-  /* Scroll hint: pinned at bottom of Page 1 */
+  /* Minimalist Scroll Cue: pure typography + icon, no clumsy button box */
   .hero-scroll-hint{
     display:inline-flex !important;
     align-items:center !important;
-    justify-content:center !important;
-    gap:7px !important;
-    padding:8px 18px !important;
-    background:rgba(255,255,255,0.05) !important;
-    border:1px solid rgba(255,255,255,0.1) !important;
-    border-radius:100px !important;
-    color:rgba(255,255,255,0.65) !important;
+    gap:8px !important;
+    color:rgba(255,255,255,0.45) !important;
     font-family:var(--FH) !important;
     font-size:0.65rem !important;
-    font-weight:600 !important;
-    letter-spacing:0.12em !important;
+    font-weight:700 !important;
+    letter-spacing:0.16em !important;
     text-transform:uppercase !important;
-    margin-top:auto !important;
-    margin-bottom:0.25rem !important;
-    align-self:flex-start !important;
-    animation:hintBounce 2.4s infinite ease-in-out !important;
-    backdrop-filter:blur(8px) !important;
     text-decoration:none !important;
+    margin-top:auto !important;
+    padding-top:1.5rem !important;
+    background:none !important;
+    border:none !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    backdrop-filter:none !important;
+    animation:hintBounce 2.4s infinite ease-in-out !important;
+    align-self:flex-start !important;
   }
   .hero-scroll-hint i{
     color:var(--g1) !important;
-    font-size:0.7rem !important;
+    font-size:0.72rem !important;
   }
 
   /* PAGE 2: STATS SHOWCASE (Dedicated spacious 2x2 grid) */
@@ -1610,12 +1621,11 @@ section::after{
     <div class="hero-inner">
       <div class="hero-content-top">
         <div class="h-ey">
-          <span class="h-ey-item"><i class="fas fa-certificate"></i> ISO 9001:2015</span>
-          <span class="h-ey-item">Est. 1990</span>
-          <span class="h-ey-div"></span>
-          <span class="h-ey-dim">Haridwar, India</span>
-          <span class="h-ey-div"></span>
-          <span class="h-ey-dim">Quality First</span>
+          <span class="h-ey-gold"><i class="fas fa-award"></i> ISO 9001:2015 Certified</span>
+          <span class="h-ey-dot">·</span>
+          <span>Est. 1990</span>
+          <span class="h-ey-dot">·</span>
+          <span>Haridwar, India</span>
         </div>
         <h1 class="hero-h">
           <span>Precision</span>
@@ -1624,16 +1634,15 @@ section::after{
         </h1>
         <p class="hero-p">Manufacturers of Industrial Uniforms, Auto Canopy Hoods, Chair Upholstery &amp; Core Paper Tubes — serving Mahindra &amp; Mahindra and Godrej Interio since 2005.</p>
         <div class="hero-clients">
-          <span class="hc">Mahindra &amp; Mahindra</span>
-          <span class="hc">Godrej Interio</span>
-          <span class="hc">API Motors</span>
-          <span class="hc hc-highlight">14+ Clients</span>
+          <span class="hc-lbl">TRUSTED BY</span>
+          <span class="hc-items">Mahindra &amp; Mahindra <span>·</span> Godrej Interio <span>·</span> API Motors</span>
+          <span class="hc-count">14+ Clients</span>
         </div>
         <div class="hero-ctas">
           <a href="#products" class="btn btn-gold hoverable">View Products <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
-      <a href="#hero-stats" class="hero-scroll-hint"><span>Explore Stats &amp; Journey</span> <i class="fas fa-chevron-down"></i></a>
+      <a href="#hero-stats" class="hero-scroll-hint"><span>Scroll to Explore</span> <i class="fas fa-chevron-down"></i></a>
     </div>
   </div></div>
   <div class="hero-stats" id="hero-stats">
