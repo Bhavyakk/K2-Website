@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://k2cloth.com/</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://k2cloth.com/k2_logo.png</image:loc>
+      <image:title>K-2 Cloth Industries Logo</image:title>
+      <image:caption>K-2 Cloth Industrial Uniform &amp; Auto Canopy Manufacturer Haridwar</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://k2cloth.com/hero_bg_desk.png</image:loc>
+      <image:title>K-2 Cloth Manufacturing Plant SIDCUL Haridwar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://k2cloth.com/auto_canopy.jpg</image:loc>
+      <image:title>Auto Canopy Hoods for Mahindra &amp; Mahindra</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://k2cloth.com/industrial_uniforms.jpg</image:loc>
+      <image:title>Industrial Uniforms and Heavy-Duty Factory Workwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://k2cloth.com/hospital_uniforms.jpg</image:loc>
+      <image:title>Hospital Uniforms and Healthcare Medical Scrubs</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://k2cloth.com/hotel_uniforms.jpg</image:loc>
+      <image:title>Hotel Uniforms and Hospitality Workwear</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://k2cloth.com/chair_upholstery.jpg</image:loc>
+      <image:title>Chair Upholstery Fabric and Leatherette for Godrej Interio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://k2cloth.com/seat_covers.jpg</image:loc>
+      <image:title>Vehicle and E-Rickshaw Seat Covers</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://k2cloth.com/core_paper_tubes.jpg</image:loc>
+      <image:title>Core Paper Tubes and Kraft Spiral Cores</image:title>
+    </image:image>
+  </url>
+</urlset>

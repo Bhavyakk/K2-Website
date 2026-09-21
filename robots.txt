@@ -1,0 +1,6 @@
+# Robots.txt for K-2 Cloth (k2cloth.com)
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://k2cloth.com/sitemap.xml
