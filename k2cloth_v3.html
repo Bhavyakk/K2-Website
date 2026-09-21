@@ -678,11 +678,11 @@ img{display:block;max-width:100%}
 @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ── ABOUT ── */
-#about{padding:5rem 0;background:var(--white)}
-.about-grid{display:grid;grid-template-columns:380px 1fr;gap:5rem;align-items:center}
-.about-visual{position:relative;flex-shrink:0}
-.about-img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;display:block}
-.about-badge{position:absolute;bottom:-1.25rem;right:-1.25rem;background:var(--g1);border-radius:10px;padding:1.3rem 1.6rem;box-shadow:0 12px 32px rgba(184,137,26,.32)}
+#about{padding:3.8rem 0;background:var(--white)}
+.about-grid{display:grid;grid-template-columns:340px 1fr;gap:4.5rem;align-items:center}
+.about-visual{position:relative;flex-shrink:0;max-width:340px;width:100%}
+.about-img{width:100%;height:380px;max-height:380px;object-fit:cover;border-radius:16px;display:block}
+.about-badge{position:absolute;bottom:-1rem;right:-1rem;background:var(--g1);border-radius:10px;padding:1.1rem 1.4rem;box-shadow:0 12px 32px rgba(184,137,26,.32);z-index:2}
 .ab-n{font-family:var(--FH);font-size:2.2rem;font-weight:800;color:var(--n1);line-height:1}
 .ab-l{font-family:var(--FB);font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(10,22,40,.5);margin-top:.15rem}
 .about-body{font-size:.95rem;font-weight:400;line-height:1.88;color:var(--muted);margin-bottom:.9rem}
@@ -1918,9 +1918,8 @@ section::after{
   .hs-lbl{font-size:.66rem}
   .h2{font-size:clamp(2rem,2.6vw,2.6rem)}
   .eyebrow{font-size:.76rem}
-  #about{padding:5.5rem 0}
-  .about-grid{gap:4.5rem}
-  .about-grid>:first-child{min-width:380px}
+  #about{padding:4rem 0}
+  .about-grid{gap:4.5rem;grid-template-columns:340px 1fr}
 }
 @media(min-width:1440px){
   .W{max-width:1380px;padding:0 3.5rem}
@@ -1936,9 +1935,8 @@ section::after{
   .hs-lbl{font-size:.7rem;color:rgba(255,255,255,.35)}
   .h2{font-size:clamp(2.1rem,2.8vw,2.8rem)}
   .eyebrow{font-size:.78rem}
-  #about{padding:6rem 0}
-  .about-grid{gap:5rem}
-  .about-grid>:first-child{min-width:400px}
+  #about{padding:4.2rem 0}
+  .about-grid{gap:4.8rem;grid-template-columns:350px 1fr}
   .nav-links a{font-size:.92rem;padding:0 1.15rem}
   .nav-cta{font-size:.82rem;padding:11px 24px}
   .nav-wa{font-size:.78rem;padding:10px 18px}
